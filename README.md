@@ -2,14 +2,14 @@
 
 Philips Hue light will change color temperature at sunrise and sunset. Same as [f.lux](http://justgetflux.com) did.
 
-It should work with the official API but I used the [Philips Hue Remote API](https://github.com/jarvisinc/PhilipsHueRemoteAPI) for development so I don't have to limit the server on local network.
+I used the [Philips Hue Remote API](https://github.com/jarvisinc/PhilipsHueRemoteAPI) for development so I don't have to limit the server on local network. Official API should work as well with little change.
 
 I used [Weather Underground API](http://www.wunderground.com/weather/api/) to get the sunrise and sunset time so you need its API key. Provide your location ZIP code and it should determine the sunrise and sunset time automatically.
 
 The current version will change color instantaneously. I probably should add the functioanlity of changing gradually in the future.
 
 ##Setup
-configure ```config.py``` using the ```config.py.sample```
+configure ```config.py``` using ```config.py.sample``` as an example
 
 ##Run
 Setup up Virtual Environment
