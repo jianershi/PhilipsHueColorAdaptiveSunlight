@@ -15,3 +15,10 @@ The current version will change color instantaneously. I probably should add the
 .. automodule:: colorChange
    :members:
    :undoc-members:
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
