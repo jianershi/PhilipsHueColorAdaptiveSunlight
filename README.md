@@ -33,6 +33,9 @@ python main.py
 
 Enjoy ~
 
+##Documentation
+http://philipshuecoloradaptivesunlight.readthedocs.org/
+
 ##License
 ```
 The MIT License (MIT)
