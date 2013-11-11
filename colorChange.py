@@ -3,6 +3,9 @@ import datetime
 from config import *
 
 class LastUpdate:
+	"""
+	This class stores the last updated sunrise and sunset information. The data is only get updated once a day at midnight.
+	"""
 	def __init__(self):
 		self.date = None
 		self.sunrise_h = None
@@ -10,7 +13,28 @@ class LastUpdate:
 		self.sunset_h = None
 		self.sunset_m = None
 
-	def updateLastUpdate(self, date,sunrise_h,sunrise_m,sunset_h,sunset_m):
+	def updateLastUpdate(self,date,sunrise_h,sunrise_m,sunset_h,sunset_m):
+		"""
+		update sunrise and sunset
+
+        :type date: :class:`datetime.date`
+        :param date: current date
+
+        :type sunrise_h: int
+        :param sunrise_h: sunrise hour
+        
+        :type sunrise_m: int
+        :param sunrise_m: sunrise minute
+        
+        :type sunset_h: int
+        :param sunset_h: sunset hour
+        
+        :type sunset_m: int
+        :param sunset_m: sunset minute
+
+
+        """
+        
 		self.date = date
 		self.sunrise_h = sunrise_h
 		self.sunrise_m = sunrise_m
@@ -18,18 +42,38 @@ class LastUpdate:
 		self.sunset_m = sunset_m
 
 	def getLastUpdate(self):
+		"""
+		Get the last updated sun information
+
+		:rtype: (int, int, int, int)
+		:return: (sunrise_h, sunrise_m, sunset_h, sunset_m)
+
+		"""
 		return (self.sunrise_h, self.sunrise_m, self.sunset_h, self.sunset_m)
 
 	def getLastUpdateDate(self):
+		"""
+		:rtype: :class:`datetime.date`
+		:return: get last updated date
+		"""
 		return self.date
 
 weatherUndergroundUrl = "http://api.wunderground.com/api/"+weatherUnderGroundAPIKey+"/astronomy/q/"+zipCode+".json"
 
 class ColorTemperatureChange:
+	"""This class process the correct color temperatur information"""
 	def __init__(self):
+		"""initialize a :class:```LastUpdate``` object"""
 		self.lastUpdate = LastUpdate()
 
 	def getColorTemperature(self,mode):
+		"""get the correct control value that is to be sent to the Philips hue
+
+		:type mode: str
+		:param mode: can be either hi/low
+		:rtype: int
+		:return: the control value that is to be sent to philips hue
+		"""
 		# max range of philip hue color temperature setting
 		maxRangeVal = 153.0
 		minRangeVal = 500.0
@@ -55,6 +99,11 @@ class ColorTemperatureChange:
 			return -1
 
 	def determineHueStates(self):
+		"""get the current time and determine whether the philips hue is in hi or low states
+		
+		:rtype: str
+		:return: hi/low
+		"""
 		today = datetime.date.today()
 		if self.lastUpdate.getLastUpdateDate() != today:
 			#get sunrise and sunset from weather underground
