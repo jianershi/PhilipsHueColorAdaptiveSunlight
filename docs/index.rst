@@ -1,12 +1,16 @@
-.. Philips Hue Color Adaptive Sunlight documentation master file, created by
-   sphinx-quickstart on Sun Nov 10 15:21:08 2013.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to Philips Hue Color Adaptive Sunlight's documentation!
+Philips Hue Color Adaptive Sunlight Documentation
 ===============================================================
 
-Contents:
+Philips Hue light will change color temperature at sunrise and sunset. Same as f.lux did.
+
+I used the Philips Hue Remote API for development so I don't have to limit the server on local network. Official API should work as well with little change.
+
+I used Weather Underground API to get the sunrise and sunset time so you need its API key. Provide your location ZIP code and it should determine the sunrise and sunset time automatically.
+
+The current version will change color instantaneously. I probably should add the functioanlity of changing gradually in the future.
+
+.. toctree::
+   :maxdepth: 2
 
 .. automodule:: colorChange
    :members:

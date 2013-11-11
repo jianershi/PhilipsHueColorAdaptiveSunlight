@@ -1,3 +1,4 @@
 ev
 *.pyc
 config.py
+.config.py
