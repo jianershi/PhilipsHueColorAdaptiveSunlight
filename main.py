@@ -12,9 +12,12 @@ while (1):
 	ct = myColorChange.getColorTemperature(whichMode)
 
 	payload = {'colormode': 'ct', 'ct': ct}
-	response=requests.post(myUrl,data=json.dumps(payload))
-
-	print response
+	try:
+		response=requests.post(myUrl,data=json.dumps(payload))
+		print response
+	except:
+		print ("connection error")
+		
 	sleep(60)
 
 
