@@ -13,7 +13,7 @@ while (1):
 
 	payload = {'colormode': 'ct', 'ct': ct}
 	try:
-		response=requests.post(myUrl,data=json.dumps(payload))
+		response=requests.put(myUrl,data=json.dumps(payload))
 		print response
 	except:
 		print ("connection error")
