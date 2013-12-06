@@ -6,6 +6,9 @@ I used the [Philips Hue Remote API](https://github.com/jarvisinc/PhilipsHueRemot
 
 I used [Weather Underground API](http://www.wunderground.com/weather/api/) to get the sunrise and sunset time so you need its API key. Provide your location ZIP code and it should determine the sunrise and sunset time automatically.
 
+##Demo
+[http://youtu.be/aodiv1Hf3dI](http://youtu.be/aodiv1Hf3dI)
+
 ##Setup
 configure ```config.py``` using ```config.py.sample``` as an example
 You will need [Weather Underground API](http://www.wunderground.com/weather/api/) to get it working.
