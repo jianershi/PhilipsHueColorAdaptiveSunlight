@@ -1,3 +1,4 @@
-myUrl = "http://localhost:5000/api"
-weatherUnderGroundAPIKey = ""
-zipCode=""
+myUrl = "http://localhost:5000/api" #Your API endpoint
+weatherUnderGroundAPIKey = "" #Weather Underground API Key
+zipCode="" #Your zipcode
+steps = 20 #define transition steps, needs to be at least 1

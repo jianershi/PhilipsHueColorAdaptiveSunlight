@@ -16,6 +16,11 @@ The current version will change color instantaneously. I probably should add the
    :members:
    :undoc-members:
 
+.. automodule:: Transition
+   :members:
+   :undoc-members:
+
+
 Indices and tables
 ==================
 

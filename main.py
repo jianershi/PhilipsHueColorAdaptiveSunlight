@@ -1,23 +1,11 @@
-from colorChange import *
+from Transition import *
 from time import sleep
-from config import myUrl
-import json
-import requests
 
-myColorChange = ColorTemperatureChange();
+# Create an instance of ColorTemperatureChange
+aTransition = Transition()
 
 while (1):
-
-	whichMode = myColorChange.setHueMode()
-	ct = myColorChange.getColorTemperature(whichMode)
-
-	payload = {'colormode': 'ct', 'ct': ct}
-	try:
-		response=requests.put(myUrl,data=json.dumps(payload))
-		print response
-	except:
-		print ("connection error")
-		
-	sleep(60)
+	aTransition.determineState()
+	sleep(1)
 
 
