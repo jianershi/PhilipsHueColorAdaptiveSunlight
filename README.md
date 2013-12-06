@@ -33,7 +33,10 @@ python main.py
 Enjoy ~
 
 ##Documentation
-http://philipshuecoloradaptivesunlight.readthedocs.org/
+For up to date documentation, refer to the docs/_build folder
+
+##Story
+[http://blog.paulshi.me/technical/2013/12/05/Philips-Hue-Color-Adaptive-Sunlight.html](http://blog.paulshi.me/technical/2013/12/05/Philips-Hue-Color-Adaptive-Sunlight.html)
 
 ##License
 ```
@@ -61,11 +64,4 @@ THE SOFTWARE.
 
 ```
 
-
-
-
-
-
-
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/paulshi/philipshuecoloradaptivesunlight/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
